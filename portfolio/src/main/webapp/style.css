@@ -6,6 +6,8 @@
 
 #greeting-container {
   margin-top: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
 }
 
 #title {
@@ -13,14 +15,25 @@
     text-align: center;
     color: navy
 }
-#intro {
+#gallery{
+  margin: auto;
+  width:max-content;
+}
+#gif{
+  width: 300px;
+  height: 221px;
+}
+#me{
+  width: 50%;
+  height: auto;
+}
+.text1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: justify;
 }
+
 .img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 50%;
+    width: 200px;
+    height: 250px;
 }
+
