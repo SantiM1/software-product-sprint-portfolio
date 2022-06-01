@@ -7,3 +7,20 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+#title {
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: navy
+}
+#intro {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+}
