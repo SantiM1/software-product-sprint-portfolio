@@ -25,6 +25,6 @@ function addRandomFact() {
   const fact = facts[Math.floor(Math.random() * facts.length)];
 
   // Add it to the page.
-  const factContainer = document.getElementById('greeting-container');
+  const factContainer = document.getElementById('fact-container');
   factContainer.innerText = fact;
 }
