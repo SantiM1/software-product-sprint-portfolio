@@ -8,12 +8,13 @@
   </head>
   <body>
     <div class="tab">
-      <button class="tab_button" onclick="location.href='/aboutMe'">About Me</button>
-      <button class="tab_button" onclick="location.href='/myprojects'">My Projects</button>
-      <button class="tab_button" onclick="location.href='/art'">Art</button>
+      <button class="tab_button" onclick="change_tabs('index')">Start</button>
+      <button class="tab_button" id="active" >About Me</button>
+      <button class="tab_button" onclick="change_tabs('myprojects')">My Projects</button>
+      <button class="tab_button" onclick="change_tabs('art')">Art</button>
     </div>
     <div id="content">
-      <h1 id ="title">Aboutme</h1>
+      <h1 id ="title">About Me</h1>
       <div id="gallery">
         <img id="me" src="images/thisisme.png" />
       </div>

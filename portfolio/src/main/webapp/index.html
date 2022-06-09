@@ -8,16 +8,17 @@
   </head>
   <body>
     <div class="tab">
-      <button class="tab_button" onclick="location.href='/aboutMe'">About Me</button>
-      <button class="tab_button" onclick="location.href='/myprojects'">My Projects</button>
-      <button class="tab_button" onclick="location.href='/art'">Art</button>
+      <button class="tab_button" id="active">Start</button>
+      <button class="tab_button" onclick="change_tabs('aboutme')">About Me</button>
+      <button class="tab_button" onclick="change_tabs('myprojects')">My Projects</button>
+      <button class="tab_button" onclick="change_tabs('art')">Art</button>
     </div>
     <div id="content">
       <h1 id ="title">Santiago Minga's Portfolio</h1>
-      <p class="text1">Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p class="text1">Click here to get a random fact about me:</p>
-      <button onclick="addRandomFact()">:D</button>
-      <div id="fact-container"></div>
+      <p class="text2">Click <a href="/hello">here</a> to see content created by server code.</p>
+      <p class="text2">Click here to get a random fact about me:</p>
+      <button id="factgenerator" onclick="addRandomFact()">Get Fact</button>
+      <div id="fact-container" class="text2"></div>
     </div>
   </body>
 </html>
