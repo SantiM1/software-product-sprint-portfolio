@@ -28,6 +28,15 @@ function addRandomFact() {
   const factContainer = document.getElementById('fact-container');
   factContainer.innerText = fact;
 }
+//Changes tabs
 function change_tabs(Name){
   window.location.href = Name + ".html";
+}
+//Async function to send message
+async function send_message(){
+    const responseFromServer = await fetch('/test');
+    const textFromResponse = await responseFromServer.text();
+
+    const textContainer = document.getElementById('text-container');
+    textContainer.innerText= textFromResponse;
 }

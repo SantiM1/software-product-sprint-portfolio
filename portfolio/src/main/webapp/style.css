@@ -13,7 +13,14 @@ html {
 #fact-container {
   margin-top: 20px;
   margin-left: 20%;
+  margin-bottom: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: justify;
+}
+#text-container {
+    margin-top: 20px;
+    margin-left: 20%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: justify;
 }
 
@@ -73,7 +80,7 @@ html {
 #active {
   background-color: #ccc;
 }
-#factgenerator{
+#btn1{
   display:block;
   margin:auto;
   border-radius: 25px;
@@ -81,7 +88,7 @@ html {
   background-color: navy;
   padding: 14px 26px;
 }
-#factgenerator:hover{
+#btn1:hover{
   color:whitesmoke;
   background-color: rgb(26, 26, 165);
 }
