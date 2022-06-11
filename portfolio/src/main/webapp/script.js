@@ -34,9 +34,18 @@ function change_tabs(Name){
 }
 //Async function to send message
 async function send_message(){
-    const responseFromServer = await fetch('/test');
-    const textFromResponse = await responseFromServer.text();
+    const responseFromServer = await fetch('/information');
+    const info = await responseFromServer.json();
 
     const textContainer = document.getElementById('text-container');
-    textContainer.innerText= textFromResponse;
+    textContainer.innerText= "";
+    textContainer.appendChild(createListElement("Currently: "+ info.currentInfo));
+    textContainer.appendChild(createListElement("Recently: "+ info.pastInfo));
+    textContainer.appendChild(createListElement("Future Plans: "+ info.futureInfo));
 }
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+    const listElement = document.createElement('li');
+    listElement.innerText = text;
+    return listElement;
+  }
