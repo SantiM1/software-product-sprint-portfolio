@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="tab">
+      <button class="tab_button" onclick="change_tabs('index')">Start</button>
+      <button class="tab_button" onclick="change_tabs('aboutme')">About Me</button>
+      <button class="tab_button" id="active">My Projects</button>
+      <button class="tab_button" onclick="change_tabs('art')">Art</button>
+    </div>
+    <div id="content">
+      <h1 id ="title">My Projects</h1>
+
+      <p class="text1"> Anyways, heres <a href="https://github.com/SantiM1">my GitHub</a>. 
+        Right now there's not much, but I'm hoping it'll grow exponentially soon, it's quite a shame my most 
+        impressive project(in my opinion) is currently private due to a privacy agreements but let me show you some the things 
+        I'm allowed to, like a small demo of the working product which was a heatmap implemented in Unity.</p>
+        <div id="gallery">
+          <img id="gif" src="images/project.gif" />
+        </div>
+      <p class ="text1">Most recently I've been working on an app mockup for an online library concept, however it is in Spanish.
+         You can interact with the demo by clicking on it how you would with a normal phone and pressing R to restart it. </p>
+      <div id="gallery">
+        <iframe width="300" height="500" 
+        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOMYCe2rY5U9dfFR27V6wVp%2FTutecaDemo3%3Fpage-id%3D0%253A1%26node-id%3D2%253A2%26viewport%3D14%252C-227%252C0.43%26scaling%3Dscale-down%26starting-point-node-id%3D7%253A50" 
+        allowfullscreen></iframe>
+      </div>
+    </div>
+  </body>
+</html>
