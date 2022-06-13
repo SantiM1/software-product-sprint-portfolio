@@ -1,9 +1,8 @@
 package com.google.sps.servlets;
 
-import java.io.Console;
+import com.google.sps.data.Information;
 import java.io.IOException;
-import java.util.ArrayList;
-//import com.google.gson.Gson;
+import com.google.gson.Gson;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,15 +18,18 @@ public final class InformationServlet extends HttpServlet
         String pastInfo = "I did a few art commisions this past month" ;
         String futureInfo = "I'll be aplying to community service programs this summer";
         //Create array of strings
-        ArrayList<String> personalInfo = new ArrayList<String>();
-        personalInfo.add(currentInfo);
-        personalInfo.add(pastInfo);
-        personalInfo.add(futureInfo);
-        String json = convertToJson(personalInfo);
+        Information personalInfo = new Information(currentInfo, pastInfo, futureInfo);
+        String json = convertToJsonUsingGson(personalInfo);
         //Display
         response.setContentType("application/json;");
         response.getWriter().println(json);
     }
+    private String convertToJsonUsingGson(Information info) {
+        Gson gson = new Gson();
+        String json = gson.toJson(info);
+        return json;
+    }
+    /* Manual Method
     private String convertToJson(ArrayList<String> info) {
         String json = "{";
         json += "\"currentInfo\": ";
@@ -42,11 +44,8 @@ public final class InformationServlet extends HttpServlet
         System.out.println(json);
         return json;
       }
-    /*private String convertToJsonUsingGson(ArrayList<String> info) {
-        Gson gson = new Gson();
-        String json = gson.toJson(info);
-        return json;
-      }
       */
+    
+    
     
 }
