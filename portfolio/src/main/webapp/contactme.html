@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="tab">
+      <button class="tab_button" onclick="change_tabs('index')">Start</button>
+      <button class="tab_button" onclick="change_tabs('aboutme')">About Me</button>
+      <button class="tab_button" onclick="change_tabs('myprojects')">My Projects</button>
+      <button class="tab_button" onclick="change_tabs('art')">Art</button>
+      <button class="tab_button" id="active">Contact Me</button>
+    </div>
+    <div id="content">
+        <h1 id ="title"> Contact Me</h1>
+      <form action="/form-handler" method="POST">
+        <label for="email" class="text1">Email:</label> <br/>
+          <textarea class="text1" name="email">your@email.com</textarea>
+            <br/>
+          <textarea id="suggestionBox" class="text1" name="text-input">Write something</textarea>
+            <br/>
+        <input class="text3" type="submit" />
+      </form>
+    </div>
+  </body>
+</html>

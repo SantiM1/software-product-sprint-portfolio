@@ -34,9 +34,48 @@ function change_tabs(Name){
 }
 //Async function to send message
 async function send_message(){
-    const responseFromServer = await fetch('/test');
-    const textFromResponse = await responseFromServer.text();
+    const responseFromServer = await fetch('/information');
+    const info = await responseFromServer.json();
 
     const textContainer = document.getElementById('text-container');
-    textContainer.innerText= textFromResponse;
+    textContainer.innerText= "";
+    textContainer.appendChild(createListElement(" Currently: "+ info.currentInfo));
+    textContainer.appendChild(createListElement(" Recently: "+ info.pastInfo));
+    textContainer.appendChild(createListElement("Future Plans: "+ info.futureInfo));
+}
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+    const listElement = document.createElement('li');
+    listElement.innerText = text;
+    return listElement
+}
+
+function cyclingGreetings(i){
+    var languages = ['es', 'en', 'af', 'el', 'zh', 'hi', 'ar'];
+    const cyclingContainer = document.getElementById('receiver-container');
+    var text = cyclingContainer.innerText;
+    const params = new URLSearchParams();
+    params.append('text', text);
+    params.append('languageCode', languages[i]);
+    if (languages.length > i){
+        setTimeout(function(){
+            fetch('/translate', {
+                method: 'POST', 
+                body:params
+            }).then(response => response.text())
+            .then((translatedMessage) => {
+              cyclingContainer.innerText = translatedMessage;
+            }); 
+            cyclingGreetings(i + 1);
+        }, 1000);
+    }else if(languages.length == i){
+        cyclingGreetings(0);
+    }
+
+}
+
+function send_to_container(){
+    const txt = document.getElementById('sending-container').value;
+    const receivingContainer = document.getElementById('receiver-container');
+    receivingContainer.innerText = txt;
 }
