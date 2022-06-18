@@ -1,6 +1,6 @@
 html {
   overflow-y: scroll;
-  background-color: #eee;
+  background-color: rgb(255, 255, 255);
 }
 #content {
   margin-top: 50px;
@@ -23,7 +23,20 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: justify;
 }
-
+#sending-container {
+    display: block;
+    margin:auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+#receiver-container {
+    display: block;
+    margin:auto;
+    margin-top:10px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
 #title {
     font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
     text-align: center;
