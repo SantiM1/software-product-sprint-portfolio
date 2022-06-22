@@ -51,6 +51,7 @@ function createListElement(text) {
 }
 
 function cyclingGreetings(i){
+    document.getElementById("btnSingleUse").disabled = true;
     var languages = ['es', 'en', 'af', 'el', 'zh', 'hi', 'ar'];
     const cyclingContainer = document.getElementById('receiver-container');
     var text = cyclingContainer.innerText;

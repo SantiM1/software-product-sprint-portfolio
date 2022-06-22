@@ -110,6 +110,18 @@ html {
   color:whitesmoke;
   background-color: rgb(26, 26, 165);
 }
+#btnSingleUse{
+    display:block;
+    margin:auto;
+    border-radius: 25px;
+    color:whitesmoke;
+    background-color: navy;
+    padding: 14px 26px;
+  }
+  #btnSingleUse:hover{
+    color:whitesmoke;
+    background-color: rgb(26, 26, 165);
+  }
 #insta{
   width: 100%;
   height: auto;
