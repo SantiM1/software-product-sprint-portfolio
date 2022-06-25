@@ -12,19 +12,19 @@
       <button class="tab_button" onclick="change_tabs('aboutme')">About Me</button>
       <button class="tab_button" onclick="change_tabs('myprojects')">My Projects</button>
       <button class="tab_button" onclick="change_tabs('art')">Art</button>
-      <button class="tab_button" id="active">Contact Me</button>
-      <button class="tab_button" onclick="change_tabs('scramble')">Try this!</button>
+      <button class="tab_button" onclick="change_tabs('contactme')">Contact Me</button>
+      <button class="tab_button" id="active">Try this!</button>
     </div>
     <div id="content">
-        <h1 id ="title"> Contact Me</h1>
-      <form action="/form-handler" method="POST">
-        <label for="email" class="text1">Email:</label> <br/>
-          <textarea class="text1" name="email">your@email.com</textarea>
+      <h1 id ="title">Santiago Minga's Portfolio</h1>
+      <p class="text2">Write anything!</p>
+      <textarea id="sending-container" class="text1" name="text-input"></textarea>
             <br/>
-          <textarea id="suggestionBox" class="text1" name="text-input">Write something</textarea>
-            <br/>
-        <input class="text3" type="submit" />
-      </form>
+      <button id="btn1" onclick="send_to_container()" > Submit </button>
+      <div  id="receiver-container" class="text2"  >Hello</div>
+      <button id= "btnSingleUse" onclick="cyclingGreetings(0)">Start</button>
     </div>
+
+    
   </body>
 </html>
